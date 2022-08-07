@@ -1,0 +1,43 @@
+@import "../variables/variables.scss";
+
+/* Text Transforms */
+.capitalize {
+  text-transform: capitalize;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.lowercase {
+  text-transform: lowercase;
+}
+
+.full-width-text {
+  text-transform: full-width;
+}
+
+.full-size-kana-text {
+  text-transform: full-size-kana;
+}
+
+/* Text Decorations */
+
+.plain-text {
+  text-decoration: none;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.strikethrough {
+  text-decoration: line-through;
+}
+
+/* Font Sizes */
+@each $key, $fontSize in $fontSizes {
+  .#{$key} {
+    font-size: var(--#{$key}, #{$fontSize});
+  }
+}
