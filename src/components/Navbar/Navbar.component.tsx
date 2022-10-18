@@ -66,9 +66,9 @@ const NavList = ({ toggleFn }: NavbarProps): ReactElement => {
     toggleFn();
     navLinksRef?.current?.querySelectorAll("a").forEach(link => {
       if (link.href !== (e.target as HTMLAnchorElement).href) {
-        link.classList.remove(styles["active-link"]);
+        link.classList.remove(styles.active);
       } else {
-        link.classList.add(styles["active-link"]);
+        link.classList.add(styles.active);
       }
     });
   }

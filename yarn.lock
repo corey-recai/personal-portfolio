@@ -111,6 +111,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@fortawesome/free-brands-svg-icons@npm:^6.1.2":
+  version: 6.1.2
+  resolution: "@fortawesome/free-brands-svg-icons@npm:6.1.2"
+  dependencies:
+    "@fortawesome/fontawesome-common-types": 6.1.2
+  checksum: 178b7f97bf64dcc1589bff74fc73cd0de32f002d585254e5dfb362d16c21011a77c61439dd507873d288f3c93de615cfc63235622968b037d8d8ded2d56f1d81
+  languageName: node
+  linkType: hard
+
 "@fortawesome/free-regular-svg-icons@npm:^6.1.2":
   version: 6.1.2
   resolution: "@fortawesome/free-regular-svg-icons@npm:6.1.2"
@@ -2715,6 +2724,7 @@ __metadata:
   dependencies:
     "@babel/helper-module-imports": ^7.18.6
     "@fortawesome/fontawesome-svg-core": ^6.1.2
+    "@fortawesome/free-brands-svg-icons": ^6.1.2
     "@fortawesome/free-regular-svg-icons": ^6.1.2
     "@fortawesome/free-solid-svg-icons": ^6.1.2
     "@fortawesome/react-fontawesome": latest

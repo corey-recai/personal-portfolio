@@ -1,3 +1,4 @@
+@import "../../../styles/mixins/typed/typed.scss";
 @import "../../../styles/mixins/mixins.scss";
 
 .nav {
@@ -47,7 +48,7 @@
           }
         }
 
-        .active-link {
+        .active {
           color: var(--primary-color);
         }
       }

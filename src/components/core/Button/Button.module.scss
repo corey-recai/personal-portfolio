@@ -1,0 +1,19 @@
+.button {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  font-weight: ver(--fw-500);
+  cursor: pointer;
+
+  &:hover {
+    background-color: var(--primary-color-alt);
+  }
+
+  .flex {
+    display: inline-flex;
+    align-items: center;
+  }
+}

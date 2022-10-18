@@ -1,5 +1,3 @@
-@import "./typed/typed.scss";
-
 @mixin container {
   max-width: 768px;
   margin-left: var(--mb-600);
@@ -14,4 +12,24 @@
 @mixin grid {
   display: grid;
   gap: 1.5rem;
+}
+
+@mixin media($size) {
+  @if $size == small-devices {
+    @media screen and (max-width: 350px) {
+      @content;
+    }
+  } @else if $size == medium-devices {
+    @media screen and (min-width: 568px) {
+      @content;
+    }
+  } @else if $size == large-devices {
+    @media screen and (min-width: 768px) {
+      @content;
+    }
+  } @else if $size == x-large-devices {
+    @media screen and (min-width: 1024px) {
+      @content;
+    }
+  }
 }
