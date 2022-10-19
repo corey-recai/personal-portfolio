@@ -1,0 +1,15 @@
+.container {
+  max-width: 768px;
+  margin-left: var(--mb-600);
+  margin-right: var(--mb-600);
+
+  @media (min-width: 768px) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}

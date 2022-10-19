@@ -1,0 +1,51 @@
+@import "../variables/variables.scss";
+
+:root {
+  --header-height: 3rem;
+  /*
+   "dull": 300,
+    "igloo": 60,
+    "jet-black": 285,
+    "brink-pink": 345,
+    "dark-engine": 280,
+    "dull-lavender": 250,
+    "crystal-green": 90,
+    "yuzu-marmalade": 45,
+    "atomic-tangerine": 20,
+    "turkish-turquoise": 186,
+    */
+  --hue-color: 20;
+  /* Colors */
+  @each $key, $color in $colors {
+    --#{$key}: #{$color};
+  }
+
+  /* Font Sizes */
+  @each $key, $fontSize in $fontSizes {
+    --#{$key}: #{$fontSize};
+  }
+
+  /* Margin Bottom */
+  --mb-200: 0.25rem;
+  --mb-300: 0.5rem;
+  --mb-400: 0.75rem;
+  --mb-500: 1rem;
+  --mb-600: 1.5rem;
+  --mb-700: 2rem;
+  --mb-800: 2.5rem;
+  --mb-900: 3rem;
+
+  /* z-index */
+  --z-tooltip: 10;
+  --z-fixed: 100;
+  --z-modal: 1000;
+}
+/* Font size for large devices */
+@media screen and (min-width: 968px) {
+  :root {
+    /* Font Sizes */
+    @each $key, $fontSize in $largeFontSizes {
+      --#{$key}: #{$fontSize};
+    }
+  }
+}
