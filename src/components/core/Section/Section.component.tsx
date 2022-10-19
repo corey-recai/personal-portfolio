@@ -3,11 +3,7 @@ import styles from "./Section.module.scss";
 import { cls } from "utils";
 import { CustomComponentProps } from "interfaces";
 
-export const Section = ({
-  _id,
-  _className,
-  children,
-}: CustomComponentProps) => {
+const Section = ({ _id, _className, children }: CustomComponentProps) => {
   return (
     <section className={cls(styles.section, _className as string)} id={_id}>
       {children}
@@ -30,3 +26,5 @@ Section.Subtitle = ({ _id, _className, children }: CustomComponentProps) => {
     </h2>
   );
 };
+
+export default Section;

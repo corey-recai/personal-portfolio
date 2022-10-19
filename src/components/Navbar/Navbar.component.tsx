@@ -1,4 +1,5 @@
 import React, { ReactElement, useRef } from "react";
+import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { solid } from "@fortawesome/fontawesome-svg-core/import.macro";
 import styles from "./Navbar.module.scss";
@@ -13,14 +14,16 @@ interface NavbarProps extends CustomComponentWithRefProps<HTMLDivElement> {
   toggleFn: () => void;
 }
 
-export const Navbar = () => {
+const Navbar = () => {
   const menuRef: HTMLElementRef<HTMLDivElement> = useRef(null);
   function toggleMenu() {
     menuRef?.current?.classList.toggle(styles.show);
   }
   return (
     <Navbar.Nav _className='something'>
-      <a href='/' className={styles.logo}></a>
+      <Link href='/'>
+        <a className={styles.logo}></a>
+      </Link>
       <Navbar.Menu _ref={menuRef} toggleFn={toggleMenu}>
         <NavList toggleFn={toggleMenu} />
       </Navbar.Menu>
@@ -96,3 +99,5 @@ Navbar.Buttons = ({ toggleFn }: NavbarProps) => {
     </div>
   );
 };
+Navbar.displayName = "Navbar";
+export default Navbar;

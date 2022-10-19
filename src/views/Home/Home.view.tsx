@@ -1,16 +1,16 @@
 import React from "react";
-import { Section } from "components/core/Section";
-import { Container } from "components/core/Container";
-import { Grid } from "components/core/Grid";
+import Section from "components/core/Section";
+import Container from "components/core/Container";
+import Grid from "components/core/Grid";
 import styles from "./Home.module.scss";
 import { CustomComponentProps } from "interfaces";
 import { brands, solid } from "@fortawesome/fontawesome-svg-core/import.macro";
 import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Button } from "components/core/Button";
+import Button from "components/core/Button";
 import { cls } from "utils";
 
-export const Home = () => {
+const Home = () => {
   return (
     <Section _className={styles.home} _id='home'>
       <Container.Grid _className={styles.container}>
@@ -55,7 +55,7 @@ Home.Social = () => {
 
 Home.SocialLink = ({ title, url, icon }: SocialLink) => {
   return (
-    <a href={url} target='_blank' className={styles.icon}>
+    <a href={url} target='_blank' rel='noreferrer' className={styles.icon}>
       <FontAwesomeIcon icon={icon} />
     </a>
   );
@@ -92,7 +92,7 @@ Home.Image = () => {
 Home.Data = () => {
   return (
     <div className={styles.data}>
-      <h1 className={styles.title}>Hi, I'm Corey</h1>
+      <h1 className={styles.title}>Hi, I&apos;m Corey</h1>
       <h3 className={styles.subtitle}>Fullstack Developer</h3>
       <p className={styles.description}>
         Quality driven individual with expertise in fullstack web development
@@ -139,3 +139,4 @@ Home.ScrollAnimation = () => {
 {
   /* </div> */
 }
+export default Home;

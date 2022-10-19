@@ -8,7 +8,7 @@ interface ButtonProps extends CustomComponentProps {
   _href?: string;
 }
 
-export const Button = ({ _href, children, _className }: ButtonProps) => {
+const Button = ({ _href, children, _className }: ButtonProps) => {
   if (!_href)
     return (
       <button className={cls(styles.button, _className as string)}>
@@ -32,3 +32,5 @@ Button.Flex = ({ _href, children, _className }: ButtonProps) => {
     </Button>
   );
 };
+
+export default Button;

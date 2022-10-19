@@ -1,1 +1,1 @@
-export * from "./Section.component";
+export { default } from "./Section.component";

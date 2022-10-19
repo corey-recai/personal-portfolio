@@ -3,7 +3,7 @@ import styles from "./Container.module.scss";
 import { cls } from "utils";
 import { CustomComponentProps } from "interfaces";
 
-export const Container = ({ children, _className }: CustomComponentProps) => {
+const Container = ({ children, _className }: CustomComponentProps) => {
   return (
     <div className={cls(styles.container, _className as string)}>
       {children}
@@ -18,3 +18,5 @@ Container.Grid = ({ children, _className }: CustomComponentProps) => {
     </Container>
   );
 };
+
+export default Container;
